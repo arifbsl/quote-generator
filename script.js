@@ -6,11 +6,10 @@ const newQuoteBtn = document.getElementById('new-quote');
 
 // Get Quote From API
 async function GetQuote(params) {
-    // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try{
-        // const response = await fetch(proxyUrl + apiUrl);
-        const response = await fetch(apiUrl);
+        const response = await fetch(proxyUrl + apiUrl);
         const data = await response.json();
 
         // If Author is Blank, add 'Unknown'
